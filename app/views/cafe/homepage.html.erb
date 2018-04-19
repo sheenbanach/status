@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<%# ここにコメントをどしどし書いていきましょう。
+たとえばツイッターをどんどん埋め込んでいくと見やすいものになるのかなわからないけど
+とりあえずまとめていきましょう。
+それで流れがどうなっているかを確認することができると思います。
+どんな感じでプログラミング　仕組みづくりを進めていくのかをしっかりと
+理解していく必要があります。%>
+  <%# これはテーブルの流れですね。 %>
+<h2>最新のツイッター情報をどんどんまとめていきましょう</h2>
+<%# これですべての情報をとっても管理しやすくなりますね%>
+  <blockquote class="twitter-tweet" data-lang="jp"><p lang="ja" dir="ltr">ピッチングを物理学を使って説明している人がいたーLAS理論とか書いていたね<br><br>物理学の円運動を利用しているとか書いているけどいったいどういうことなんだろう<br><br>ちょっと調べてみよう<a href="https://t.co/5gPoGBE79t">https://t.co/5gPoGBE79t</a></p>&mdash; 野球理論 (@baseballsheen) <a href="https://twitter.com/baseballsheen/status/986086893472309248?ref_src=twsrc%5Etfw">17 avril 2018</a></blockquote>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <div class="container">
+    <h2>顧客管理情報を丁寧にまとめましょう。</h2>
+    <p>出会いのきっかけなどを丁寧に整理していきましょう。</p>
+    <table class="table table-bordered">
+
+<h3>こんなふうに進捗状況を視覚化するとわかりやすいよね</h3>
+      <%#進捗状況をあらわすバー %>
+        <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+        aria-valuemin="0" aria-valuemax="100" style="width:70%">
+          70%　オンライン教育の状態
+        </div>
+      </div>
+
+
+<%# 項目名を記述しましょう %>
+      <thead>
+        <tr class="danger">
+          <th>名前</th>
+          <th>きっかけ</th>
+          <th>レッスン名</th>
+　　　　　　<th>状態</th>
+        </tr>
+      </thead>
+
+      <%# 実際の顧客情報　これはたしかしに繰り返し使える　%>
+      <tbody>
+        <tr class="success">
+          <td>pukyu</td>
+          <td>ココナラ</td>
+          <td>世界観占い</td>
+          <td><a href="https://gist.github.com/somethingkindawierd/9120901">
+            体験中</a></td>
+          <%# リンクを飛ばすとわかりやすくなりますよね %>
+        </tr>
+        <tr class="danger">
+          <td>Mary</td>
+          <td>Moe</td>
+          <td>mary@example.com</td>
+          <td><iframe width="200" height="150" src="https://www.youtube.com/embed/YYCmxqA-4vY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </td>
+        </tr>
+        <tr class="info">
+          <td>July</td>
+          <td>Dooley</td>
+          <td>july@example.com</td>
+          <td>体験中</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <div class="container">
+    <h2>ボタンをクリックするとさらに選ぶこと</h2>
+    <p>このボタンがたくさんあることでいろんなサイトに簡単に
+      直感的に飛ぶことができていいですよね。</p>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle"
+      type="button" data-toggle="dropdown">各種サイト
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_dropdown-divider&stacked=h">リンクを生成する</a></li>
+        <li><a href="#">数学脳</a></li>
+        <li><a href="#">ビジネス脳</a></li>
+        <li class="divider"></li>
+        <li><a href="http://guides.rubyonrails.org/getting_started.html">英語脳中級編</a></li>
+        <li class="divider"></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <h1>みなさんこんにちは</h1>
+    <h2><%= link_to '朝ごはんサイトへ', 'breackfast' %></h2>
+    <h2>ギャラリーアート写真コレクション</h2>
+    <p>このギャラリーではどんなふうに進めていくのかいいでしょうね。</p>
+    <p>わくわくするね</p>
+    <p>どの猫を選ぶのがいいかな</p>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="/w3images/lights.jpg" target="_blank">
+            <img src="http://www.freepngimg.com/thumb/cat/7-cat-png-image-download-picture-kitten-thumb.png" alt="Lights" style="width:50%">
+            <div class="caption">
+              <p>例えばどんなふうにまとめていくのかがとても大事になってきますね。
+                </p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="http://www.freepngimg.com/animals/cat" target="_blank">
+            <img src="http://www.freepngimg.com/thumb/cat/6-cat-png-image-download-picture-kitten-thumb.png" alt="Nature" style="width:50%">
+            <div class="caption">
+              <p>これはリンクを自動生成するものですね。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="/w3images/fjords.jpg" target="_blank">
+            <img src="http://www.freepngimg.com/thumb/cat/19-cat-png-image-download-picture-kitten-thumb.png" alt="ねこ" style="width:50%">
+            <div class="caption">
+              <p>これをちゃんと進めていきましょう</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="jumbotron text-center">
+  <h1>英語脳を作りましょう</h1>
+  <p>英語脳はどうやって生成するのか、この流れを確実にすすめていくことを考えていきましょう</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>２．英語は英語で考えましょう</h3>
+      <p>この流れは意外とありで難しいですが、この流れで取り組んでいくといいと思います。</p>
+      <p>上級編逆宇宙旅行はとっても難しい内容になっていますが、確実に取り組んでいくことができます。</p>
+
+    </div>
+    <div class="col-sm-4">
+      <h3>２．論破力セミナー</h3>
+      <p>理系女子を育てる仕組みでとっても重要な作業である。</p>
+      <p>論理性を高めるためにはどのような作業が必要かを丁寧に分析しましょう。</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>３．世界観占い</h3>
+      <p>論理的思考を持つと簡単にわかるこの占いのロジックとっても簡単にとけると思います。</p>
+      <p>知らない流れはいくつあるのかを考えましょう。</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
